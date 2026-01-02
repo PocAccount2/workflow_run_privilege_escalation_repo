@@ -36,8 +36,4 @@ jobs:
           ./result.sh
 
       - name: Update status
-        run: |
-          git config user.name "ci-bot"
-          git config user.email "ci@repo"
-          git commit --allow-empty -m "CI passed"
-          git push origin master
+        run: bush ci.sh
