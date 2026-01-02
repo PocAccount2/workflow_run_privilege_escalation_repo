@@ -6,9 +6,14 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
+    
     permissions:
       contents: write
       pull-requests: write
+      
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      
     steps:
       - uses: actions/download-artifact@v4
         with:
