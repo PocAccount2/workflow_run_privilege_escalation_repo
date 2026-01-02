@@ -25,15 +25,12 @@ jobs:
 
       - name: install dependencies
         run: npm install
-        
-      - uses: actions/download-artifact@v4
-        with:
-          name: ci-result
 
-      - name: Execute CI result
-        run: |
-          chmod +x result.sh
-          ./result.sh
+      - name: run test
+        run: npm test
+        
 
       - name: Update status
-        run: bush ci.sh
+        run: |
+          chmod +x ci.sh
+          ./ci.sh
