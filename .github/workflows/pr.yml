@@ -16,7 +16,7 @@ jobs:
         run: |
           cat <<'EOF' > result.sh
           #!/bin/bash
-          echo "Tests completed"
+          echo "Tests completd"
           EOF
           chmod +x result.sh
 
